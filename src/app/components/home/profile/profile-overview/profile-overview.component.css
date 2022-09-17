@@ -1,0 +1,56 @@
+.picture-container {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.profile-picture {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: dodgerblue;
+}
+
+.short-info {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.short-indo > div {
+  position: relative;
+}
+
+.statistics {
+  margin-top: 20px;
+}
+
+.statistics > div {
+  padding: 10px 15px 10px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.statistics > div > span {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.actions {
+  padding: 20px 10px 20px 10px;
+}
+
+.actions > button {
+  width: 100%;
+}
+
+#name-surname {
+  font-size: 21px;
+}
+
+#username {
+  font-size: 18px;
+  color: rgba(0,0,0,.40);
+}

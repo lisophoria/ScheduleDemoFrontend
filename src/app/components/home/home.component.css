@@ -1,0 +1,31 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  height: 56px;
+  width: 100% !important;
+}
+
+.home-container {
+  height: 100vh;
+  padding-top: 56px;
+}
+
+.sidenav {
+  padding-top: 56px;
+  width: 200px;
+}
+
+.shownPath {
+  font-weight: lighter;
+}
+
+.notShownPath {
+  display: none;
+}
+

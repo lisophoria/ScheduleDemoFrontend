@@ -1,0 +1,27 @@
+<div class="app-container">
+
+  <div class="profile-content">
+
+    <mat-grid-list [cols]="4" gutterSize="20px" rowHeight="450">
+
+      <mat-grid-tile colspan="1">
+        <div class="tile-inner">
+          <app-profile-overview [firstname]="selfInfo.firstname"
+                                [lastname]="selfInfo.lastname"
+                                [username]="selfInfo.username"></app-profile-overview>
+        </div>
+      </mat-grid-tile>
+
+      <mat-grid-tile colspan="3">
+        <div class="tile-inner">
+
+          <app-profile-editor></app-profile-editor>
+
+        </div>
+      </mat-grid-tile>
+
+    </mat-grid-list>
+
+  </div>
+
+</div>

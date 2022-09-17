@@ -1,0 +1,7 @@
+<mat-selection-list [multiple]="false">
+  <mat-list-option *ngFor="let route of navigationRoutes"
+                   [value]="route"
+                   (click)="navigateToRoute(route.path)">
+    {{route.name}}
+  </mat-list-option>
+</mat-selection-list>
