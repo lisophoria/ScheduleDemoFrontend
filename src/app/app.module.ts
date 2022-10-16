@@ -21,6 +21,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import { ProfileOverviewComponent } from './components/home/profile/profile-overview/profile-overview.component';
 import { ProfileEditorComponent } from './components/home/profile/profile-editor/profile-editor.component';
 import {MatTabsModule} from "@angular/material/tabs";
+import {MessagesComponent} from "./components/home/messages/messages.component";
+import {ChatComponent} from "./components/home/messages/chat/chat.component";
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import {MatTabsModule} from "@angular/material/tabs";
     ProfileComponent,
     ProfileOverviewComponent,
     ProfileEditorComponent,
+    MessagesComponent,
+    ChatComponent,
   ],
     imports: [
         BrowserModule,
