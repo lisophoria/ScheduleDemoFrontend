@@ -23,7 +23,9 @@ import { ProfileEditorComponent } from './components/home/profile/profile-editor
 import {MatTabsModule} from "@angular/material/tabs";
 import {MessagesComponent} from "./components/home/messages/messages.component";
 import {ChatComponent} from "./components/home/messages/chat/chat.component";
-
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import { ChatOverlayComponent } from './components/home/messages/chat-overlay/chat-overlay.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,22 +37,25 @@ import {ChatComponent} from "./components/home/messages/chat/chat.component";
     ProfileEditorComponent,
     MessagesComponent,
     ChatComponent,
+    ChatOverlayComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatIconModule,
-        MatMenuModule,
-        MatSidenavModule,
-        MatListModule,
-        MatGridListModule,
-        MatTabsModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule,
+    MatGridListModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatInputModule,
+  ],
   providers: [SessionStorageService],
   bootstrap: [AppComponent]
 })

@@ -6,7 +6,7 @@ import {ProfileComponent} from "./components/home/profile/profile.component";
 import {AuthGuard} from "./auth/auth.guard";
 import {ROLE} from "./models/auth/role";
 import {MessagesComponent} from "./components/home/messages/messages.component";
-import {ChatComponent} from "./components/home/messages/chat/chat.component";
+import {ChatOverlayComponent} from "./components/home/messages/chat-overlay/chat-overlay.component";
 
 const routes: Routes = [
   {
@@ -39,7 +39,7 @@ const routes: Routes = [
         children: [
           {
             path: ':chatId',
-            component: ChatComponent,
+            component: ChatOverlayComponent,
           },
         ]
       },

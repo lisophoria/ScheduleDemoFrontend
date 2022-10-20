@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MessagesService} from "../../../services/messages.service";
 import {Chat} from "../../../models/chat/chat";
 import {Router} from "@angular/router";
@@ -6,7 +6,7 @@ import {Router} from "@angular/router";
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
-  styleUrls: ['./messages.component.css']
+  styleUrls: ['./messages.component.css'],
 })
 export class MessagesComponent implements OnInit {
 

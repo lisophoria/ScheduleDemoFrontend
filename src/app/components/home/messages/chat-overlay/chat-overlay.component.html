@@ -1,0 +1,19 @@
+<div class="chat-overlay-wrapper">
+
+  <div>
+
+    <mat-form-field appearance="fill" class="form-field-wrapper-custom">
+      <mat-label>Message</mat-label>
+      <input matInput [(ngModel)]="content">
+
+      <button matSuffix mat-icon-button
+              (click)="sendMessage(content, activatedChat.uniqueId)">
+        <mat-icon>send</mat-icon>
+      </button>
+    </mat-form-field>
+
+  </div>
+
+  <app-chat [messages]="activatedChat.messages"></app-chat>
+
+</div>

@@ -1,7 +1,7 @@
-.messages-container {
+.global-messages-wrapper {
   height: 100%;
 }
 
-.sidenav {
+.sidenav-chats {
   width: 250px;
 }

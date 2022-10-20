@@ -1,6 +1,6 @@
-<mat-sidenav-container class="messages-container">
+<mat-sidenav-container class="global-messages-wrapper">
 
-  <mat-sidenav opened="true" mode="side" class="sidenav">
+  <mat-sidenav opened="true" mode="side" class="sidenav-chats" position="start">
     <mat-selection-list [multiple]="false">
     <mat-list-option *ngFor="let chat of chats"
                      [value]="chat"
