@@ -5,8 +5,6 @@ import {HomeComponent} from "./components/home/home.component";
 import {ProfileComponent} from "./components/home/profile/profile.component";
 import {AuthGuard} from "./auth/auth.guard";
 import {ROLE} from "./models/auth/role";
-import {MessagesComponent} from "./components/home/messages/messages.component";
-import {ChatOverlayComponent} from "./components/home/messages/chat-overlay/chat-overlay.component";
 
 const routes: Routes = [
   {
@@ -29,20 +27,6 @@ const routes: Routes = [
           roles: [ROLE.STUDENT, ROLE.TEACHER]
         }
       },
-      {
-        path: 'messages',
-        component: MessagesComponent,
-        canActivate: [AuthGuard],
-        data: {
-          roles: [ROLE.STUDENT, ROLE.TEACHER]
-        },
-        children: [
-          {
-            path: ':chatId',
-            component: ChatOverlayComponent,
-          },
-        ]
-      },
     ]
   },
   {
@@ -57,19 +41,11 @@ export const routeByRole: any = {
       name: 'Profile',
       path: 'home/profile'
     },
-    {
-      name: 'Messages',
-      path: 'home/messages'
-    },
   ],
   [ROLE.TEACHER]: [
     {
       name: 'Profile',
       path: 'home/profile'
-    },
-    {
-      name: 'Messages',
-      path: 'home/messages'
     },
   ],
   [ROLE.SUPER_USER]: null,
