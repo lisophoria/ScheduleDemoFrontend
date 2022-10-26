@@ -1,0 +1,23 @@
+.app-chat-messages-wrapper {
+  /*height: 100%;*/
+  width: calc(100% - 16px);
+  padding: 8px 8px 56px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  padding: 8px;
+  margin-bottom: 8px;
+  width: 250px;
+  right: 0;
+}
+
+.message-sender {
+  align-self: end;
+  background: lightblue;
+}
+
+.message-username {
+  font-size: 18px;
+}

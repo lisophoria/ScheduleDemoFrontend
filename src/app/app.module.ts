@@ -24,6 +24,9 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatCardModule} from "@angular/material/card";
+import { MessagesComponent } from './components/home/messages/messages.component';
+import { ChatComponent } from './components/home/messages/chat/chat.component';
+import { ChatMessagesComponent } from './components/home/messages/chat-messages/chat-messages.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +36,9 @@ import {MatCardModule} from "@angular/material/card";
     ProfileComponent,
     ProfileOverviewComponent,
     ProfileEditorComponent,
+    MessagesComponent,
+    ChatComponent,
+    ChatMessagesComponent,
   ],
     imports: [
         BrowserModule,

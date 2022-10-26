@@ -1,0 +1,15 @@
+<div class="app-chat-wrapper">
+
+  <div class="chat-container">
+    <app-chat-messages [chat]="currentChat" [currentUserId]="currentUserId"></app-chat-messages>
+  </div>
+
+  <div class="input-container">
+    <mat-form-field appearance="fill" class="message-input">
+      <mat-label>Message</mat-label>
+      <input matInput [(ngModel)]="sendingMessageContent">
+      <button mat-icon-button matSuffix (click)="sendingMessageContent = ''"><mat-icon>send</mat-icon></button>
+    </mat-form-field>
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+<div class="app-chat-messages-wrapper">
+
+  <mat-card class="message" [ngClass]="{'message-sender': isSender(message.user.uniqueId)}" *ngFor="let message of chat.messages">
+    <mat-card-title>
+      <span class="message-username">{{message.user.username}}</span>
+    </mat-card-title>
+    <mat-card-content>
+      <span>{{message.content}}</span>
+    </mat-card-content>
+  </mat-card>
+
+</div>
