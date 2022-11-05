@@ -22,7 +22,7 @@ export class MessagesComponent implements OnInit {
   }
 
   openChat(chatId: Number): void {
-    this.router.navigateByUrl('home/messages/' + chatId);
+    this.router.navigateByUrl('home/messages/' + chatId); // Switching chats not actually switching :)
   }
 
 }

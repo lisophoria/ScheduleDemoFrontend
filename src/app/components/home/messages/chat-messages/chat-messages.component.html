@@ -7,9 +7,9 @@
   </div>
 
   <div *ngFor="let message of (messages | async)?.reverse()" style="display: flex; flex-direction: column">
-    <mat-card class="message" [ngClass]="{'message-sender': isSender(message.user.uniqueId)}">
+    <mat-card class="message" [ngClass]="{'message-sender': isSender(message.user)}">
       <mat-card-title>
-        <span class="message-username">{{message.user.username}}</span>
+        <span class="message-username">{{message.user}}</span>
       </mat-card-title>
       <mat-card-content>
         <span>{{message.content}}</span>

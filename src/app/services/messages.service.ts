@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Chat} from "../models/chat/chat";
-import {SendingMessage} from "../models/chat/sending-message";
 import {Message} from "../models/chat/message";
 
 @Injectable({
@@ -23,11 +22,11 @@ export class MessagesService {
   }
 
   getChatMessages(chat: Number, page: Number): Observable<Message[]> {
-    return this.http.get<Message[]>(this.chatsUrl + chat + '/messages/' + page).pipe();
+    return this.http.get<Message[]>(this.chatsUrl + chat + '/messages/' + page);
   }
 
-  createNewMessage(message: SendingMessage): Observable<SendingMessage> {
-    return this.http.post<SendingMessage>(this.chatsUrl + 'messages', message).pipe();
+  createNewMessage(message: Message): Observable<Message> {
+    return this.http.post<Message>('/api/chats/messages', message);
   }
 
 }

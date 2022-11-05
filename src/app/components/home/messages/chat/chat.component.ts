@@ -3,6 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import {Chat} from "../../../../models/chat/chat";
 import {MessagesService} from "../../../../services/messages.service";
 import {SelfService} from "../../../../services/self.service";
+import {Message} from "../../../../models/chat/message";
 
 @Component({
   selector: 'app-chat',
@@ -16,7 +17,7 @@ export class ChatComponent implements OnInit {
               private selfService: SelfService) { }
 
   currentChat: Chat;
-  currentUserId: number;
+  currentUsername: String;
   sendingMessageContent: string;
 
   ngOnInit(): void {
@@ -29,8 +30,13 @@ export class ChatComponent implements OnInit {
     })
 
     this.selfService.getSelfInfo().subscribe(data => {
-      this.currentUserId = data.uniqueId;
+      this.currentUsername = data.username;
     })
+  }
+
+  sendMessage(sendingContent: String): void {
+    let message: Message = {content: sendingContent, user: this.currentUsername, chat: this.currentChat.uniqueId} as Message;
+    this.messagesService.createNewMessage(message).subscribe();
   }
 
 }

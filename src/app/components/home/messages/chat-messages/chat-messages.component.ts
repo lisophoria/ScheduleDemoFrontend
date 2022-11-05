@@ -12,7 +12,7 @@ import {Observable, map, zip} from "rxjs";
 export class ChatMessagesComponent implements OnInit {
 
   @Input() chat: Chat;
-  @Input() currentUserId: number;
+  @Input() currentUsername: String;
 
   messages: Observable<Message[]>;
   currentPage: number;
@@ -25,8 +25,8 @@ export class ChatMessagesComponent implements OnInit {
     this.messages = this.messagesService.getChatMessages(this.chat.uniqueId, 0);
   }
 
-  isSender(uniqueId: number): boolean {
-    return uniqueId == this.currentUserId;
+  isSender(user: String): boolean {
+    return user === this.currentUsername;
   }
 
   showMore(pageToLoad: number): void {
