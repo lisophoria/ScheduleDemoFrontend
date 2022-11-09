@@ -1,0 +1,19 @@
+<div class="app-messages-wrapper">
+  <mat-sidenav-container class="messages-wrapper">
+
+    <mat-sidenav class="chat-list-select" mode="side" opened="opened">
+
+      <mat-selection-list [multiple]="false">
+        <mat-list-option *ngFor="let chat of chats" [value]="chat" (click)="openChat(chat.uniqueId)">
+          {{chat.name}}
+        </mat-list-option>
+      </mat-selection-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content class="chat-wrapper">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+</div>

@@ -1,0 +1,22 @@
+<div class="app-chat-messages-wrapper">
+
+  <div class="show-more-container">
+    <button mat-button id="show-more-button"
+            (click)="showMore(currentPage)">Show more</button>
+    <mat-divider></mat-divider>
+  </div>
+
+  <div *ngFor="let message of (messages | async)?.reverse()" style="display: flex; flex-direction: column">
+    <mat-card class="message" [ngClass]="{'message-sender': isSender(message.user)}">
+      <mat-card-title>
+        <span class="message-username">{{message.user}}</span>
+      </mat-card-title>
+      <mat-card-content>
+        <span>{{message.content}}</span>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+
+</div>

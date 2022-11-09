@@ -21,7 +21,12 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import { ProfileOverviewComponent } from './components/home/profile/profile-overview/profile-overview.component';
 import { ProfileEditorComponent } from './components/home/profile/profile-editor/profile-editor.component';
 import {MatTabsModule} from "@angular/material/tabs";
-
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatCardModule} from "@angular/material/card";
+import { MessagesComponent } from './components/home/messages/messages.component';
+import { ChatComponent } from './components/home/messages/chat/chat.component';
+import { ChatMessagesComponent } from './components/home/messages/chat-messages/chat-messages.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +36,9 @@ import {MatTabsModule} from "@angular/material/tabs";
     ProfileComponent,
     ProfileOverviewComponent,
     ProfileEditorComponent,
+    MessagesComponent,
+    ChatComponent,
+    ChatMessagesComponent,
   ],
     imports: [
         BrowserModule,
@@ -46,6 +54,9 @@ import {MatTabsModule} from "@angular/material/tabs";
         MatListModule,
         MatGridListModule,
         MatTabsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatCardModule,
     ],
   providers: [SessionStorageService],
   bootstrap: [AppComponent]
